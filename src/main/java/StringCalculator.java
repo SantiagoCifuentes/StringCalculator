@@ -28,7 +28,7 @@ public class StringCalculator
             ArrayList<Integer> listaNumeros = new ArrayList<Integer>();
             int acumulador = 0;
             for(String elemento: listaDividida) {
-
+                try {
                     int valorTemporal = Integer.parseInt(elemento);
                     if(valorTemporal < 0) {
                         throw new Exception("Excepción de número negativo");
@@ -37,6 +37,11 @@ public class StringCalculator
                         continue;
                     }
                     listaNumeros.add(valorTemporal);
+                }catch (Exception e)
+                {
+
+                }
+
 
 
 
